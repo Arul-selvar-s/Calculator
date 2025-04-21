@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.cQxKYHpD8dFmmjbJcV1a_gHaHa?pid=ImgDet&w=178&h=178&c=7&dpr=1.5">
+</head>
+<body>
+    
+<div class="container">
+    <div class="form">
+    <div id="displays">
+         <button id="display"></button>
+    </div>
+    <div>
+        <button onclick="arul()" id="power"><span class="hover-name">All Clear</span>AC</button>
+        <button onclick="deleteLast()" id="power"><span class="hover-name">Delete</span>DEL</button>
+        <button onclick="storeValue('**')"id="power"><span class="hover-name">Power</span>^</button>
+        <button onclick="storeValue('/')" id="div"><span class="hover-name">Divide</span>/</button>
+    </div>
+    <div>
+        <button onclick="storeValue('7')">7</button>
+        <button onclick="storeValue('8')">8</button>
+        <button onclick="storeValue('9')">9</button>
+        <button onclick="storeValue('*')"id="mul"><span class="hover-name">Multiple</span>*</button>
+    </div>
+    <div>
+        <button onclick="storeValue('4')">4</button>
+        <button onclick="storeValue('5')">5</button>
+        <button onclick="storeValue('6')">6</button>
+        <button onclick="storeValue('-')"id="sub"><span class="hover-name">Subract</span>-</button>
+    </div>
+    <div>
+        <button onclick="storeValue('1')">1</button>
+        <button onclick="storeValue('2')">2</button>
+        <button onclick="storeValue('3')">3</button>
+        <button onclick="storeValue('+')"id="add"><span class="hover-name">Add</span>+</button>
+    </div>
+    <div>
+        <button onclick="storeValue('0')">0</button>
+        <button onclick="storeValue('.')">.</button>
+        <button onclick="showValues()" id="equal" >=</button>
+    </div>
+
+</div>
+</div>
+
+
+<script>
+
+
+    // Array to store values
+    let storedValues = [];
+    let lastValue = null;
+
+    // Function to store value
+    function storeValue(val) {
+
+      if (val === '/' && lastValue === '/') {
+        return;
+      }
+      if (val === '*' && lastValue === '*') {
+        return;
+      }
+      if (val === '-' && lastValue === '-') {
+        return;
+      }
+      if (val === '+' && lastValue === '+') {
+        return;
+      }
+      if (val === '**' && lastValue === '**') {
+        return;
+      }
+
+        storedValues.push(val);
+        lastValue = val;
+        document.getElementById("display").innerText = "" + storedValues.join("")
+    }
+    function deleteLast() {
+        storedValues.pop();
+        document.getElementById("display").innerText = "" + storedValues.join("")  
+    }
+
+
+    function arul(){
+        location.reload();
+    }
+    // Function to show stored values
+ 
+ 
+let outputscreen =  document.getElementById("display").innerText = "Calculator" + storedValues.join("")
+
+function showValues() {
+    document.getElementById("display").innerText = "" + eval(storedValues.join(""));
+    
+}
+
+    
+
+
+</script>
+
+    
+</body>
+</html>

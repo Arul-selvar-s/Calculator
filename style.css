@@ -1,0 +1,102 @@
+body{
+        
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 10%, rgba(109, 199, 159, 0.86) 39%, rgba(237, 221, 83, 1) 100%);
+    
+}
+
+.form div{
+    height: 80px;
+    width: 400px;
+}
+
+
+.container .form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    padding-left: 90px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #3F5EFB;
+background: linear-gradient(14deg, rgba(63, 94, 251, 1) 41%, rgba(235, 127, 148, 0.67) 82%);
+}
+
+.form button{
+    height: 60px;
+    width: 60px;
+    margin: 10px 10px;
+    box-shadow: blue 0px 5px 5px , red 0px 5px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+::placeholder{
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.form #display{
+    display: flex;
+    width: 300px;
+    
+}
+.form #displays{
+    display: flex;
+    width: 350px;
+}
+.hover-name {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 10px;
+    
+  }
+  #mul,#div, #add, #sub,#power{
+    display: inline-block;
+    position: relative;
+  }
+  #mul:hover .hover-name , #div:hover .hover-name, #add:hover .hover-name, #sub:hover .hover-name, #power:hover .hover-name{
+    visibility: visible;
+  }
+
+.form #display input{
+    display: flex;
+    text-align: right;
+    width: 320px;
+    height: 60px;
+    margin: 10px 0px;
+    box-shadow: none;
+    border-radius: 10px;
+    font-size: 40px;
+}
+
+#equal
+{
+    width: 140px;
+    
+}
